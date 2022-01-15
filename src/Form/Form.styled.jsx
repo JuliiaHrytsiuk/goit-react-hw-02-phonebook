@@ -19,7 +19,7 @@ export const FormLabel = styled.label`
 
   border-radius: 5px;
   background: beige;
-  box-shadow: 16px 16px 44px black, -16px -16px 44px #282a28;
+  box-shadow: 16px 16px 44px grey, -16px -16px 44px grey;
 `;
 
 export const FormInput = styled.input`
@@ -34,7 +34,7 @@ export const FormInput = styled.input`
 
   border-radius: 5px;
   background: beige;
-  box-shadow: 6px 6px 4px black, -16px -16px 44px pink;
+  box-shadow: 6px 6px 44px pink, -16px -16px 44px beige;
 `;
 
 export const FormButton = styled.button`
@@ -47,6 +47,4 @@ export const FormButton = styled.button`
   border: none;
   border-radius: 10px;
   background: pink;
-
-  box-shadow: 16px 16px 44px #0a0a0a, -16px -16px 44px #282a28;
 `;
