@@ -14,4 +14,5 @@ export const Title = styled.h2`
 
 export const ContactTitle = styled.p`
   color: red;
+  text-align: center;
 `;

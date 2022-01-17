@@ -6,12 +6,11 @@ import ContactListItem from "../ContactItem";
 const ContactList = ({ contacts, onDeleteContact }) => {
   return (
     <ContactListField>
-      {contacts.map((id, name, number) => (
+      {contacts.map((contact) => (
         <ContactListItem
-          name={name}
-          key={id}
-          number={number}
+          contact={contact}
           onDeleteContact={onDeleteContact}
+          key={contact.id}
         />
       ))}
     </ContactListField>
