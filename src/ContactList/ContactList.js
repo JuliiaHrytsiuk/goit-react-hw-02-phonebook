@@ -1,26 +1,18 @@
-import React, { Component } from "react";
+import React from "react";
 import PropTypes from "prop-types";
-import {
-  ContactListField,
-  DeleteButton,
-  ContactTitle,
-  ContactItem,
-  ContactInfo,
-} from "./ContactList.styled";
+import { ContactListField } from "./ContactList.styled";
+import ContactListItem from "./ContactItem";
 
 const ContactList = ({ contacts, onDeleteContact }) => {
   return (
     <ContactListField>
-      <ContactTitle>Total amount of contacts:</ContactTitle>
-      {contacts.map(({ id, name, number }) => (
-        <ContactItem key={id}>
-          <ContactInfo>
-            {name}: {number}
-          </ContactInfo>
-          <DeleteButton onClick={() => onDeleteContact(id)}>
-            Delete
-          </DeleteButton>
-        </ContactItem>
+      {contacts.map((id, name, number) => (
+        <ContactListItem
+          name={name}
+          key={id}
+          number={number}
+          onDeleteContact={onDeleteContact}
+        />
       ))}
     </ContactListField>
   );

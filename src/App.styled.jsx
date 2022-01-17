@@ -11,3 +11,7 @@ export const Title = styled.h2`
   font-size: 38px;
   color: black;
 `;
+
+export const ContactTitle = styled.p`
+  color: red;
+`;

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Title } from "./App.styled";
+import { Container, Title, ContactTitle } from "./App.styled";
 import Form from "./Form";
 import Filter from "./Filter";
 import ContactList from "./ContactList";
@@ -24,7 +24,7 @@ class App extends Component {
       number,
     };
     const similarContact = contacts.find(
-      (contact) => contact.name === newContact.name
+      (contact) => contact.name.toLowerCase() === newContact.name.toLowerCase()
     );
     const similarNumber = contacts.find(
       (contact) => contact.number === newContact.number
@@ -70,6 +70,7 @@ class App extends Component {
         <Form onSubmit={this.formSubmitHandler} />
         <Title>Contacts</Title>
         <Filter value={filter} onChange={this.changeFilter} />
+        <ContactTitle>Total amount of contacts:</ContactTitle>
         <ContactList
           contacts={filteredContacts}
           onDeleteContact={this.deleteContact}
